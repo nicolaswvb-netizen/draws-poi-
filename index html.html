@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japón Mínimo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="sol-neon" onclick="cambiarFondo()"></div>
+
+    <h1>JAPÓN</h1>
+    <p id="texto">Toca el sol rojo para encender la noche.</p>
+    
+    <button class="btn" onclick="alert('¡Konnichiwa! ⛩️')">Saludar</button>
+
+    <script>
+        function cambiarFondo() {
+            const body = document.body;
+            const texto = document.getElementById('texto');
+            
+            // Alterna entre fondo claro y oscuro al hacer clic en el sol
+            if (body.style.background === 'rgb(34, 34, 34)') {
+                body.style.background = '#faf8f5';
+                body.style.color = '#333';
+                texto.textContent = "Toca el sol rojo para encender la noche.";
+            } else {
+                body.style.background = '#222';
+                body.style.color = '#fff';
+                texto.textContent = "¡Modo neón activado!";
+            }
+        }
+    </script>
+</body>
+</html>
